@@ -1,5 +1,7 @@
 # *Focusrite Control* Command Line Reset script for MacOS
 
+<a href="scarlett-18i20.png"><img src="scarlett-18i20.png" width="100%"></img></a>
+
 ## Usecase:
 - We've been running multiple Focusrite `Scarlett 18i20 Gen 3`s into a MacBookPro.
 - MacOS supports multiple USB audio interfaces well, this is fine.
@@ -30,5 +32,14 @@
 
 Enjoy!
 
-# Connection Diagram
-<img src="connection.jpg" width="400"></img>
+# Connection Diagram (how'd we get 24 inputs?)
+Wiring of 2 `Scarlett 18i20 Gen3`s + 1 `OctoPre Dynamic` + bluetooth audio (hey, we wanted to listen to our phone!):
+<a href="connection.jpg"><img src="connection.jpg" width="100%"></img></a>
+
+- 24 analog inputs + 2 bluetooth (1 L, 1 R)  (want more?  add another octopre for 32;  or add another scarlet, repeat... etc.)
+- Bluetooth Audio input:
+  - Here we "save 2 inputs" by using the open S/PDIF stereo input, but this means we must clock sync off the bluetooth audio optical signal.
+  - Select a device with acceptable S/PDIF sample rate:
+    - 48kHz is better than 44hKz... anything faster wont work, with octopre also attached.   So 48hKz is a good goal.
+    - Both Scarlett 18i20 `clocksource == S/PDIF`
+    - if you skip the bluetooth audio in then instead set `clocksource == internal` for the first scarlett and `clocksource == S/PDIF` for the second

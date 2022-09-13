@@ -23,14 +23,27 @@
 ## Problem:
 - Which works well for a while...  Until it doesn't.  `Focusrite Control` kind of corrupts itself after some days/weeks/months of MacOS uptime.
 - The `Focusrite Control` app can start to give a `No Hardware Connected` message, even though only one `Scarlet 18i20` is properly connected.
-- `Focusrite Control` is clearly confused, corrupted, or (perhaps nefariously) deliberately sabbotaging user experience here.
+- `Focusrite Control` is clearly confused, or corrupted...  (or perhaps engineered to upsell their pro product line).
 
 ## Solution:
-- Focusrite gives us troubleshooting advice to "Quit" the `FocusriteControlService` in MacOS's `Activity Monitor`.  
+- Focusrite's knowledge base gives us the troubleshooting solution to "Quit" the `FocusriteControlService` in MacOS's `Activity Monitor`.
 - This can be a pain to hunt for every time (and seriously impacts workflow during the creative process).
-- So I've written a [command line script](scarlett_reset.sh) to restart the `FocusriteControlService` from the MacOS *Terminal*
+- So I've written a [command line script](scarlett_reset.sh) to quickly restart the `FocusriteControlService` from the MacOS *Terminal*
 
 Enjoy!
+
+
+# Running:
+```
+# load the function
+# put this in your .bashrc, or you can manually run it from a bash shell (to load the function)
+  $ source scarlett_reset.sh
+
+# reset your device  (run the bash function)
+  $ scarlett_reset
+
+# alternatively, you can uncomment the last line of the script to auto-run on load...
+```
 
 # Connection Diagram (how'd we get 24 inputs?)
 Wiring of 2 `Scarlett 18i20 Gen3`s + 1 `OctoPre Dynamic` + bluetooth audio (hey, we wanted to listen to our phone!):

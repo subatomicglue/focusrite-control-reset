@@ -38,8 +38,12 @@ Wiring of 2 `Scarlett 18i20 Gen3`s + 1 `OctoPre Dynamic` + bluetooth audio (hey,
 
 - 24 analog inputs + 2 bluetooth (1 L, 1 R)  (want more?  add another octopre for 32;  or add another scarlet, repeat... etc.)
 - Bluetooth Audio input:
-  - Here we "save 2 inputs" by using the open S/PDIF stereo input, but this means we must clock sync off the bluetooth audio optical signal.
-  - Select a device with acceptable S/PDIF sample rate:
+  - Here we "save 2 inputs" by using the open S/PDIF stereo input, for our Blutooth audio.
+    - To use S/PDIF as an input for Scarlett 18i20, it must be the clocksource.
+  - S/PDIF clocksource needs to be stable, so Dont use a blutooth audio device directly:
+    - most blutooth devices turn off their digital output when not connected, which kills the entire pipeline (no clock source, your Scarletts are dead).
+    - get an "always on" A2D (analog to digital) device that runs at 48kHz (see TOHKEIL device pictured above).
+  - Select a device with acceptable S/PDIF sample rate, since it clocks your entire rig:
     - 48kHz is better than 44hKz... anything faster wont work, with octopre also attached.   So 48hKz is a good goal.
     - Both Scarlett 18i20 `clocksource == S/PDIF`
-    - if you skip the bluetooth audio in then instead set `clocksource == internal` for the first scarlett and `clocksource == S/PDIF` for the second
+    - if you skip the bluetooth audio-in, then instead set `clocksource == internal` for the First (Scarlett B pictured) and `clocksource == S/PDIF` for the Second (Scarlett A pictured)

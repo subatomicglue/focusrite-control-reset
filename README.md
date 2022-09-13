@@ -46,6 +46,13 @@ Enjoy!
 ```
 
 # Connection Diagram (how'd we get 24 inputs?)
+This is how:
+<a href="scarlett-18i20.png"><img src="scarlett-18i20.png" width="100%"></img></a><BR>
+<a href="scarlett-18i20-2.png"><img src="scarlett-18i20-2.png" width="100%"></img></a><BR>
+<a href="octopre-dynamic-2.png"><img src="octopre-dynamic-2.png" width="100%"></img></a>
+
+And actually, we get 26 analog inputs (2 for blutooth).
+
 Wiring of 2 `Scarlett 18i20 Gen3`s + 1 `OctoPre Dynamic` + bluetooth audio (hey, we wanted to listen to our phone!):
 <a href="connection.jpg"><img src="connection.jpg" width="100%"></img></a>
 

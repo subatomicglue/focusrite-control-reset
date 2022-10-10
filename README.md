@@ -1,7 +1,8 @@
 # *Focusrite Control* Command Line Reset script for MacOS
 
-Reset the `Focusrite Control` daemon for the Focusrite Scarlett 18i20 audio interface, on MacOS.
+Fix the "No Hardware Connected" error given by "Focusrite Control"
 <a href="scarlett-18i20.png"><img src="scarlett-18i20.png" width="100%"></img></a>
+Reset the `Focusrite Control` daemon for the Focusrite Scarlett 18i20 audio interface, on MacOS.
 
 ## Usecase:
 - We've been running multiple Focusrite `Scarlett 18i20 Gen 3`s into a MacBookPro.

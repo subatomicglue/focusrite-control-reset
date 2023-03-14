@@ -37,7 +37,8 @@ function focusrite {
   if [ "$retval" == "0" ]; then
     local PID=`sudo launchctl list | grep com.focusrite.ControlServer | awk {'print $1'}`
     echo "Killing $PID"
-    sudo kill -9 "$PID"
+    sudo launchctl kickstart -k -p system/com.focusrite.ControlServer
+    #sudo kill -9 "$PID"   # a more abrupt way to do it :)
     echo ""
 
     echo "Waiting for it to restart..."
@@ -66,7 +67,6 @@ alias scarlett_restart=scarlett
 alias focusrite_restart=scarlett
 alias scarlett_restart=scarlett
 alias focusrite_restart=scarlett
-
 
 # Run:
 # scarlett_restart
